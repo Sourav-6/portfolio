@@ -48,26 +48,26 @@
 
     <!-- ============ HERO SECTION ============ -->
     <section class="hero" id="home">
+        <div class="hero-glow"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
+                <div class="hero-badge hero-anim hero-anim-1">
                     <span class="badge-dot"></span>
                     Hello!
                 </div>
-                <h1 class="hero-name">
+                <h1 class="hero-name hero-anim hero-anim-2">
                     I'm <span class="highlight">Sourav</span> Vijay
                 </h1>
-                <div class="hero-title" style="border:none; animation:none; width:auto;">
-                    <span>A </span>
+                <div class="hero-title hero-anim hero-anim-3">
                     <span class="typing-text" id="typingText"></span>
                     <span class="typing-cursor">|</span>
                 </div>
-                <p class="hero-description">
+                <p class="hero-description hero-anim hero-anim-4">
                     Full-stack developer with hands-on experience building scalable and 
                     user-centric applications. Passionate about AI-driven solutions and 
                     intelligent automation.
                 </p>
-                <div class="hero-buttons">
+                <div class="hero-buttons hero-anim hero-anim-5">
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i> Get In Touch
                     </a>
@@ -75,7 +75,7 @@
                         <i class="fas fa-briefcase"></i> My Work
                     </a>
                 </div>
-                <div class="hero-social">
+                <div class="hero-social hero-anim hero-anim-6">
                     <a href="mailto:souravvijay637@gmail.com" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
@@ -90,8 +90,9 @@
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image hero-anim hero-anim-img">
                 <div class="hero-image-wrapper">
+                    <div class="hero-glow-ring"></div>
                     <div class="rotating-border"></div>
                     <img src="assets/profile-hero.jpg" alt="Sourav Vijay - Full Stack Developer">
                     <div class="floating-dots">
@@ -117,7 +118,7 @@
                 <div class="about-image-container fade-in-up">
                     <img src="assets/profile-about.jpg" alt="Sourav Vijay at work">
                     <div class="experience-badge">
-                        <span class="number counter" data-target="4">0</span>
+                        <span class="number counter" data-target="3">0</span>
                         <span class="label">Years of<br>Experience</span>
                     </div>
                 </div>
@@ -169,136 +170,63 @@
                 <h2 class="section-title">My Skills</h2>
             </div>
             <div class="skills-grid">
+                <!-- Programming Languages -->
                 <div class="skill-category fade-in-up">
                     <div class="skill-category-header">
-                        <i class="fas fa-code"></i>
+                        <div class="skill-icon-box"><i class="fas fa-code"></i></div>
                         <h3>Programming Languages</h3>
                     </div>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">C / C++</span>
-                                <span class="skill-percentage">100%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="100%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">Dart</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="80%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fas fa-c"></i><span>C / C++</span></div>
+                        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+                        <div class="skill-item"><i class="fas fa-laptop-code"></i><span>Dart</span></div>
+                        <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
                     </div>
                 </div>
+
+                <!-- Web & Frameworks -->
                 <div class="skill-category fade-in-up">
                     <div class="skill-category-header">
-                        <i class="fas fa-laptop-code"></i>
+                        <div class="skill-icon-box"><i class="fas fa-layer-group"></i></div>
                         <h3>Web & Frameworks</h3>
                     </div>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML / CSS</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">Node.js</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">React.js</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span class="skill-name">Flutter</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" data-width="80%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5 / CSS3</span></div>
+                        <div class="skill-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                        <div class="skill-item"><i class="fab fa-react"></i><span>React.js</span></div>
+                        <div class="skill-item"><i class="fas fa-mobile-alt"></i><span>Flutter</span></div>
+                        <div class="skill-item"><i class="fas fa-server"></i><span>Express.js</span></div>
                     </div>
                 </div>
-            </div>
-            <div class="skills-tools fade-in-up">
-                <h3 class="tools-title" style="text-align:center;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;">Tools & Technologies</h3>
-                    <div class="tool-card">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-category fade-in-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Platforms</h3>
                     </div>
-                    <div class="tool-card">
-                        <i class="fab fa-java"></i>
-                        <span>Java</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+                        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+                        <div class="skill-item"><i class="fas fa-robot"></i><span>AI / ML</span></div>
+                        <div class="skill-item"><i class="fas fa-cogs"></i><span>REST APIs</span></div>
+                        <div class="skill-item"><i class="fas fa-terminal"></i><span>Linux / CLI</span></div>
                     </div>
-                    <div class="tool-card">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="skill-category fade-in-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box"><i class="fas fa-brain"></i></div>
+                        <h3>Core Concepts</h3>
                     </div>
-                    <div class="tool-card">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fas fa-database"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fas fa-robot"></i>
-                        <span>AI / ML</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Flutter</span>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="fas fa-cubes"></i><span>OOPs</span></div>
+                        <div class="skill-item"><i class="fas fa-puzzle-piece"></i><span>Problem Solving</span></div>
+                        <div class="skill-item"><i class="fas fa-project-diagram"></i><span>DSA</span></div>
+                        <div class="skill-item"><i class="fas fa-network-wired"></i><span>System Design</span></div>
+                        <div class="skill-item"><i class="fas fa-sitemap"></i><span>DBMS</span></div>
                     </div>
                 </div>
             </div>
@@ -645,6 +573,10 @@
                 </div>
                 <div class="contact-form-wrapper fade-in-up">
                     <form class="contact-form" id="contactForm">
+                        <input type="hidden" name="access_key" value="a5cc90cf-40bc-4cc8-86c3-d626c6270339">
+                        <input type="hidden" name="subject" value="New Portfolio Contact Message">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -654,8 +586,8 @@
                             <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" name="form_subject" placeholder="Project Inquiry" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
@@ -694,8 +626,7 @@
                 </div>
 
                 <p class="footer-copyright">
-                    &copy; 2025 Sourav Vijay. All rights reserved. Crafted with 
-                    <i class="fas fa-heart" style="color: var(--accent);"></i>
+                    &copy; 2025 Sourav Vijay. All rights reserved.
                 </p>
             </div>
         </div>

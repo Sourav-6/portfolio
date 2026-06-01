@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (typingEl) {
     const strings = [
-      'Full Stack Developer',
-      'AI Enthusiast',
-      'Flutter Developer',
-      'Problem Solver',
+      'A Full Stack Developer',
+      'An AI Enthusiast',
+      'A Flutter Developer',
+      'A Problem Solver',
     ];
     let stringIndex = 0;
     let charIndex = 0;
@@ -202,26 +202,66 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ──────────────────────────────────────────────
-  // 10. Contact Form
+  // 10. Contact Form — Web3Forms
   // ──────────────────────────────────────────────
   const contactForm = document.querySelector('.contact-form');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const btnIcon = submitBtn.querySelector('i');
+      const btnText = submitBtn.querySelector('span');
       if (!submitBtn) return;
 
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Message Sent! ✓';
-      submitBtn.classList.add('success');
+      // Loading state
+      btnIcon.className = 'fas fa-spinner fa-spin';
+      btnText.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
 
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.classList.remove('success');
-        contactForm.reset();
-      }, 3000);
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          // Success
+          btnIcon.className = 'fas fa-check';
+          btnText.textContent = 'Message Sent!';
+          submitBtn.classList.add('success');
+          contactForm.reset();
+
+          setTimeout(() => {
+            btnIcon.className = 'fas fa-paper-plane';
+            btnText.textContent = 'Send Message';
+            submitBtn.classList.remove('success');
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+          }, 3500);
+        } else {
+          throw new Error(result.message || 'Something went wrong');
+        }
+      } catch (err) {
+        // Error
+        btnIcon.className = 'fas fa-exclamation-triangle';
+        btnText.textContent = 'Failed. Try again.';
+        submitBtn.style.background = '#ef4444';
+        submitBtn.style.borderColor = '#ef4444';
+
+        setTimeout(() => {
+          btnIcon.className = 'fas fa-paper-plane';
+          btnText.textContent = 'Send Message';
+          submitBtn.style.background = '';
+          submitBtn.style.borderColor = '';
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+        }, 3500);
+      }
     });
   }
 
